@@ -1,0 +1,115 @@
+:root{
+    --darkblue : #142B7E;
+    --lightblue : #f0f0f0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'reg';
+    src: url('./DMSans-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'bold';
+    src: url('./DMSans-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    }
+h1{
+    font-family: 'bold';
+    font-size: 7.5rem;
+}
+h2{
+    font-family: 'reg';
+    font-size: 5rem;
+}
+h3{
+    font-family: 'reg';
+    font-size: 3.5rem;
+}
+h4{
+    font-family: 'reg';
+    font-size: 2.5rem;
+}
+h5{
+    font-family: 'reg';
+    font-size: 2rem;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1;
+}
+body{
+    background-image: url('./img/bg.png');
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;   
+}
+
+main{
+    margin: auto;
+    display: grid;
+    gap: 15rem;
+    grid-template-columns: auto auto;
+    padding: 10rem;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+    justify-content: center;
+}
+
+.left{
+    width: 50rem;
+    height: 50rem;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    border-radius: 2.5rem 2.5rem 0 0 ;
+}
+.navItem{
+    padding:1rem 0;
+    width: 100%;
+    text-align: center;
+    color: var(--darkblue);
+    background-color: var(--lightblue);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.navItem:hover{
+    background-color: var(--darkblue);
+    color: white;
+}
+.leftNav{
+    border-top-left-radius: 2.5rem;
+}
+.rightNav{
+    border-top-right-radius: 2.5rem;
+}
+.right{
+    width: 50rem;
+    height: 50rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2.5rem;
+    box-shadow: 0 10px 30px 5px rgba(0,0,0,0.15);
+    transition: all 0.4s;
+}
+.right:hover{
+    box-shadow: 0 10px 30px 5px rgba(0,0,0,0.25);
+}
+
+.white{
+    color: white;
+}
+.black{
+    color:black;
+}
+.active{
+    background-color:var(--darkblue);
+}
