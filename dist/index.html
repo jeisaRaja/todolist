@@ -31,17 +31,27 @@
             </section>
         </section>
 
-        <section class="modal">
-            <form action="" class="form_project">
-                <label for="title_project">Project Title</label>
-                    <input type="text" name="title" id="title_project">
-                <label for="description_project">Project Title</label>
-                    <input type="text" name="description" id="description_project">
+
+        <section class="modal" id="modal_todo">
+            <form action="" class="form_todo">
+                <label for="title_todo">Todo Title</label>
+                    <input type="text" name="title" id="title_todo">
+                <label for="description_todo">Todo Description</label>
+                    <input type="text" name="description" id="description_todo">
+                <label for="date_todo">Due Date</label>
+                    <input type="date" id="date_todo" name="date">
+    
+                    <select id="priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                        <option value="Crucial">Urgent</option>
+                      </select>
                 <button class="submit">Submit</button>
             </form>
         </section>
-        <button class="click">CLICK ME</button>
     </main>
+
 
     <script src="index.bundle.js"></script>
 </body>

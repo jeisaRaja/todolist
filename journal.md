@@ -17,3 +17,9 @@ We need to loop for the project / todo then we also need to push that into the h
 
 possible solution : 
     / make a function that determine which array the app should loop over, if user chose tab todo, then the function need to clear the innerHTML of the content_body and then loop over project array and then append child.
+
+## Day 3
+### 31 Dec 2021
+The problem before have been solved.
+but we now have another problem. that is, we need to make sure the form that user will fill also changed based on the current tab user is.
+so we need to find a way to know where is user currently on (project or todo)
