@@ -136,9 +136,13 @@ main{
 
 
 .content{
-    height: 42rem;
+    height: 50rem;
     padding: 2rem;
+    position: relative;
+}
+.content_body{
     overflow-y: scroll;
+    height: 35rem;
 }
 
 
@@ -174,10 +178,15 @@ form{
 
 #modal_project{
     display: none;
-    position: absolute;
+    bottom: 0;
 }
 
 #modal_todo{
     display: none;
+}
+
+.addNew{
     position: absolute;
+    right: 4rem;
+    bottom: 7rem;
 }

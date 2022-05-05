@@ -14,7 +14,7 @@ const form_project = document.querySelector('.form_project')
 const modal_project = document.querySelector('#modal_project')
 const modal_todo = document.querySelector('#modal_todo')
 const content_body = document.querySelector('.content_body')
-
+const btnDiv = document.querySelector('.btnDiv')
 
 const h1_todo = "<h2>Your</h2>Todo List";
 h1.innerHTML = h1_todo;
@@ -56,27 +56,6 @@ let array_todo = [
         priority: 'penting',
         checklist: 'belom'
      },
-     {
-        title:'tes 2', 
-        description:'waduh lagi',
-        dueDate: '50 januari',
-        priority: 'penting',
-        checklist: 'belom'
-     },
-     {
-        title:'tes 2', 
-        description:'waduh lagi',
-        dueDate: '50 januari',
-        priority: 'penting',
-        checklist: 'belom'
-     },
-     {
-        title:'tes 2', 
-        description:'waduh lagi',
-        dueDate: '50 januari',
-        priority: 'penting',
-        checklist: 'belom'
-     }, 
 ]
 
 // btn.addEventListener('click', ()=>{
@@ -97,21 +76,21 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function addProjectHandler(){
     
-    if(modal_project.display == 'flex'){
+    if(modal_project.style.display == 'flex'){
         modal_project.style.display = 'none'
+        console.log('none')
     }else{
         modal_project.style.display = 'flex'
+        console.log('flex')
     }
-    return 0;
 }
 function addTodoHandler(){
-    console.log(modal_todo.style.display)
+
     if(modal_todo.style.display == 'flex'){
         modal_todo.style.display = 'none'
     }else{
         modal_todo.style.display = 'flex'
     }
-    return 0;
 }
 
 function addProject(e){
@@ -135,6 +114,7 @@ function addTodo(e){
 
 function showProjects(){
     content_body.innerHTML = ""
+    btnDiv.innerHTML = ''
     array_project.forEach(project =>{
         
         const project_title = document.createElement('h3')
@@ -148,13 +128,14 @@ function showProjects(){
     const addButton = document.createElement('BUTTON')
     addButton.innerHTML = 'ADD PROJECT'
     addButton.classList.add('addNew')
-    content_body.appendChild(addButton)
+    btnDiv.appendChild(addButton)
+
     addButton.addEventListener('click', addProjectHandler)
 }
 
 function showTodos(){
     content_body.innerHTML = ""
-
+    btnDiv.innerHTML = ''
     array_todo.forEach(todo =>{
         
         const todo_body = document.createElement('div')
@@ -165,7 +146,8 @@ function showTodos(){
     const addButton = document.createElement('BUTTON')
     addButton.innerHTML = 'ADD TODO'
     addButton.classList.add('addNew')
-    content_body.appendChild(addButton)
+    btnDiv.appendChild(addButton)
+
 
     addButton.addEventListener('click', addTodoHandler)
 }

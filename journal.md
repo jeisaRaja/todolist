@@ -23,3 +23,8 @@ possible solution :
 The problem before have been solved.
 but we now have another problem. that is, we need to make sure the form that user will fill also changed based on the current tab user is.
 so we need to find a way to know where is user currently on (project or todo)
+
+## Day 4
+### 5 May 2022
+After months of pause, the problem still exist. 
+Noticed one new problem, we need to refresh the page (not literally f5). We need to make a function that refresh the content inside the tabs. 'refresh' function sounds correct.
