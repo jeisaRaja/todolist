@@ -28,3 +28,6 @@ so we need to find a way to know where is user currently on (project or todo)
 ### 5 May 2022
 After months of pause, the problem still exist. 
 Noticed one new problem, we need to refresh the page (not literally f5). We need to make a function that refresh the content inside the tabs. 'refresh' function sounds correct.
+
+!!We done it --> we dont actually need another refresh function, we can use 'showProjects' and 'showTodos'
+

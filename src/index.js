@@ -8,7 +8,6 @@ const content = document.querySelector('.content');
 const h1 = document.querySelector('.title_text');
 const navbar = document.querySelector('.navbar');
 const content_title = document.querySelector('.content_title');
-// const btn = document.querySelector('.click')
 const submit = document.querySelector('.submit')
 const form_project = document.querySelector('.form_project')
 const modal_project = document.querySelector('#modal_project')
@@ -58,14 +57,6 @@ let array_todo = [
      },
 ]
 
-// btn.addEventListener('click', ()=>{
-//     if(modal.style.display == 'flex'){
-//         modal.style.display = 'none'
-//     }
-//     else{
-//         modal.style.display = 'flex'
-//     }
-// })
 
 document.addEventListener('DOMContentLoaded', function(){
 
@@ -78,10 +69,8 @@ function addProjectHandler(){
     
     if(modal_project.style.display == 'flex'){
         modal_project.style.display = 'none'
-        console.log('none')
     }else{
         modal_project.style.display = 'flex'
-        console.log('flex')
     }
 }
 function addTodoHandler(){
@@ -101,6 +90,15 @@ function addProject(e){
     const project = new Project(title,desc,empty_array)
     console.log(array_project)
     array_project.push(project)
+    modal_project.style.display = 'none'
+    showProjects()
+}
+
+function refreshProject(){
+    modal_project.style.display = 'none'
+    addTodoHandler()
+    modal_todo.style.display = 'none'
+    addProjectHandler()
 }
 function addTodo(e){
     e.preventDefault();
@@ -157,7 +155,6 @@ const projects_content =  "<h3>This is your projects</h3>"
 content_title.innerHTML = todos_content
 
 function clickListen(e){
-    console.log('berhasil')
     const button_path = e.path[0].id
     if(button_path=="todos"){
         todos.classList.add('active')
