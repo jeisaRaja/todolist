@@ -59,10 +59,13 @@ let array_todo = [
 
 
 document.addEventListener('DOMContentLoaded', function(){
-
-    submit.addEventListener('click', addProject
-        // console.log(form_project[0].value , form_project[1].value)
-    ,false); 
+    const currPage = true
+    currPage===true ? submit.addEventListener('click', addProject
+    // console.log(form_project[0].value , form_project[1].value)
+,false) : submit.addEventListener('click', addTodo
+// console.log(form_project[0].value , form_project[1].value)
+,false)
+    
 },false);
 
 function addProjectHandler(){
@@ -94,12 +97,6 @@ function addProject(e){
     showProjects()
 }
 
-function refreshProject(){
-    modal_project.style.display = 'none'
-    addTodoHandler()
-    modal_todo.style.display = 'none'
-    addProjectHandler()
-}
 function addTodo(e){
     e.preventDefault();
     const title = form_project[0].value

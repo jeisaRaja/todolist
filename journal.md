@@ -1,4 +1,4 @@
-# To Do List
+# To Do List Project
 ## Day 1
 ### 27 Dec 2021
 Today just starting to plan the project, I already make the web design sketch.
@@ -29,5 +29,9 @@ so we need to find a way to know where is user currently on (project or todo)
 After months of pause, the problem still exist. 
 Noticed one new problem, we need to refresh the page (not literally f5). We need to make a function that refresh the content inside the tabs. 'refresh' function sounds correct.
 
-!!We done it --> we dont actually need another refresh function, we can use 'showProjects' and 'showTodos'
+*We done it --> we dont actually need another refresh function, we can use 'showProjects' and 'showTodos'
+
+## Day 5
+### 6 May 2022 
+Today, i will try to finish the adding projects and adding todos mechanism.
 
